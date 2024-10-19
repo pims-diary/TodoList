@@ -4,7 +4,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.runtime.Composable
 import com.example.todolist.R
-import com.example.todolist.composables.EventsScreen
+import com.example.todolist.composables.event.EventsScreen
 import com.example.todolist.data.StudentEvent
 import java.time.LocalDate
 

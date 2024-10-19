@@ -1,4 +1,4 @@
-package com.example.todolist.composables
+package com.example.todolist.composables.event
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

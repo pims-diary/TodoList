@@ -1,4 +1,4 @@
-package com.example.todolist.composables
+package com.example.todolist.composables.list
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

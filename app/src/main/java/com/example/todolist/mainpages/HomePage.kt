@@ -1,5 +1,7 @@
 package com.example.todolist.mainpages
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -26,6 +28,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.todolist.composables.TileButton
 import com.example.todolist.data.AppDatabase
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun HomePage(db: AppDatabase) {
     val navController = rememberNavController()

@@ -1,4 +1,4 @@
-package com.example.todolist.composables
+package com.example.todolist.composables.event
 
 import android.os.Build
 import androidx.annotation.RequiresApi
