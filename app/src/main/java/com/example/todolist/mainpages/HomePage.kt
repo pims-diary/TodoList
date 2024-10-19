@@ -11,8 +11,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.DateRange
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Button
@@ -38,8 +38,14 @@ fun HomePage(db: AppDatabase) {
         composable("home") { HomeLandingScreen(navController) }
         composable("todo") { TodoListPage(db) }
         composable("timetable") { TimetablePage(timetable = timetable) }
+        composable("courses") { CoursesPage(navController) }
         composable("dates") { ImportantDatesPage() }
         composable("details") { DetailsScreen(navController = navController) }
+        composable("courseDetail/{courseCode}") { backStackEntry ->
+            val courseCode = backStackEntry.arguments?.getString("courseCode")
+            val course = courses.find { it.code == courseCode }
+            course?.let { CourseDetailPage(course = it) }
+        }
     }
 }
 
@@ -76,9 +82,9 @@ fun HomeLandingScreen(navController: NavHostController) {
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
             TileButton(
-                text = "Tile 3",
-                icon = Icons.Default.Info,
-                onClick = { navController.navigate("details") }
+                text = "Applied Courses",
+                icon = Icons.Default.Create,
+                onClick = { navController.navigate("courses") }
             )
             TileButton(
                 text = "Important Dates",
