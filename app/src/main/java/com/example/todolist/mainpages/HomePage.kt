@@ -9,9 +9,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -33,7 +34,8 @@ fun HomePage(db: AppDatabase) {
     NavHost(navController = navController, startDestination = "home") {
         composable("home") { HomeLandingScreen(navController) }
         composable("todo") { TodoListPage(db) }
-        composable("timetable") { TimetableScreen(timetable = timetable) }
+        composable("timetable") { TimetablePage(timetable = timetable) }
+        composable("dates") { ImportantDatesPage() }
         composable("details") { DetailsScreen(navController = navController) }
     }
 }
@@ -54,7 +56,7 @@ fun HomeLandingScreen(navController: NavHostController) {
         ) {
             TileButton(
                 text = "To Do List",
-                icon = Icons.Default.Add,
+                icon = Icons.Default.List,
                 onClick = { navController.navigate("todo") }
             )
             TileButton(
@@ -76,9 +78,9 @@ fun HomeLandingScreen(navController: NavHostController) {
                 onClick = { navController.navigate("details") }
             )
             TileButton(
-                text = "Tile 4",
-                icon = Icons.Default.Info,
-                onClick = { navController.navigate("details") }
+                text = "Important Dates",
+                icon = Icons.Default.Notifications,
+                onClick = { navController.navigate("dates") }
             )
         }
     }
