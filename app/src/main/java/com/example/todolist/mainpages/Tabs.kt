@@ -1,5 +1,7 @@
 package com.example.todolist.mainpages
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Tab
@@ -13,6 +15,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.todolist.data.AppDatabase
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun TabScreen(database: AppDatabase) {
     var tabIndex by remember { mutableIntStateOf(0) }

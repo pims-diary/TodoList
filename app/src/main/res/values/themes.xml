@@ -2,4 +2,14 @@
 <resources>
 
     <style name="Theme.ToDoList" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.YourApp.SplashScreen" parent="Theme.SplashScreen">
+        <!-- Set your splash screen background here -->
+        <item name="windowSplashScreenBackground">@color/todo_icon_background</item>
+        <!-- Optional: Set the splash screen icon -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/todo_icon_round</item>
+        <!-- Optional: Set icon animation duration -->
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <!-- Optional: Keep the splash screen on-screen for a few seconds -->
+        <item name="postSplashScreenTheme">@style/Theme.ToDoList</item>
+    </style>
 </resources>
