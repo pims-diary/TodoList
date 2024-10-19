@@ -1,4 +1,4 @@
-package com.example.todolist.composables
+package com.example.todolist.composables.buttons
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.padding
