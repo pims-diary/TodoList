@@ -30,7 +30,7 @@ fun TabScreen(database: AppDatabase) {
             }
         }
         when (tabIndex) {
-            0 -> TodoListPage(db = database)
+            0 -> HomePage(db = database)
             1 -> AboutPage()
             2 -> ExtraPage()
         }

@@ -29,22 +29,7 @@ fun OpenDialer(phoneNumber: String) {
     val ctx = LocalContext.current
 
     // on below line we are creating a column
-    Column(
-        // on below line we are specifying modifier
-        // and setting max height and max width
-        // for our column
-        modifier = Modifier
-            .fillMaxSize()
-            .fillMaxHeight()
-            .fillMaxWidth()
-            // on below line we are
-            // adding padding for our column
-            .padding(5.dp),
-        // on below line we are specifying horizontal
-        // and vertical alignment for our column
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
+    Column {
         // on below line adding a button to open URL
         Button(
             colors = ButtonDefaults.buttonColors(containerColor = TodoInputBarFabColor),
@@ -74,7 +59,7 @@ fun OpenDialer(phoneNumber: String) {
             Text(
                 // on below line adding a text ,
                 // padding, color and font size.
-                text = "Call us",
+                text = phoneNumber,
                 modifier = Modifier.padding(10.dp),
                 color = Color.White,
                 fontSize = 15.sp
