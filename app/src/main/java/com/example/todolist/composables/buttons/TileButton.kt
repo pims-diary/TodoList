@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.todolist.ui.constants.TodoThemeColor
 
 @Composable
 fun TileButton(
@@ -30,7 +31,7 @@ fun TileButton(
             .size(160.dp) // Square tile
             .padding(8.dp),
         shape = RoundedCornerShape(10.dp), // Rounded edges
-        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF6200EA)), // Button color
+        colors = ButtonDefaults.buttonColors(containerColor = TodoThemeColor), // Button color
         elevation = ButtonDefaults.buttonElevation(
             defaultElevation = 8.dp
         )

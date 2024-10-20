@@ -13,12 +13,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.todolist.ui.constants.TodoInputBarFabColor
+import com.example.todolist.ui.constants.TodoThemeColor
 
 @Composable
 fun ButtonToMapsAt(latitude: Double, longitude: Double) {
     val context = LocalContext.current
     Button(
-        colors = ButtonDefaults.buttonColors(containerColor = TodoInputBarFabColor),
+        colors = ButtonDefaults.buttonColors(containerColor = TodoThemeColor),
         onClick = {
             val gmmIntentUri = Uri.parse("geo:$latitude,$longitude")
             val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)

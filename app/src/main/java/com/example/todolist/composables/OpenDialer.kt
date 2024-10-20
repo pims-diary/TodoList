@@ -20,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.todolist.ui.constants.TodoInputBarFabColor
+import com.example.todolist.ui.constants.TodoThemeColor
 
 @Composable
 fun OpenDialer(phoneNumber: String) {
@@ -32,7 +33,7 @@ fun OpenDialer(phoneNumber: String) {
     Column {
         // on below line adding a button to open URL
         Button(
-            colors = ButtonDefaults.buttonColors(containerColor = TodoInputBarFabColor),
+            colors = ButtonDefaults.buttonColors(containerColor = TodoThemeColor),
             onClick = {
                 // on below line we are opening the dialer of our
                 // phone and passing phone number.

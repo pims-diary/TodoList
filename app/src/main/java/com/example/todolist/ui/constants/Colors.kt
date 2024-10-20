@@ -11,3 +11,4 @@ val TodoItemTextColor = PrimaryColor
 
 val TodoInputBarBackgroundColor = PrimaryColor
 val TodoInputBarFabColor = PrimaryLightColor
+val TodoThemeColor = Color(0xFF165327)
