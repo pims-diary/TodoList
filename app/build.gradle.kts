@@ -96,4 +96,12 @@ dependencies {
 
     // Splash screen
     implementation(libs.androidx.core.splashscreen)
+
+    // Retrofit for network calls
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    // Coroutines for background processing
+    implementation(libs.kotlinx.coroutines.android)
+
 }
