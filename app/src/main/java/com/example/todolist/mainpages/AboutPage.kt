@@ -89,7 +89,7 @@ fun AboutLandingScreen(navController: NavHostController) {
             ContactInfoRow(
                 label = "Our location:",
                 icon = Icons.Default.LocationOn,
-                content = { ButtonToMapsAt(latitude = -36.8211, longitude = 174.6123) }
+                content = { ButtonToMapsAt(latitude = -36.864, longitude = 174.722) }
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -100,7 +100,7 @@ fun AboutLandingScreen(navController: NavHostController) {
                 content = { OpenEmail() }
             )
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(32.dp))
 
             // This is a text composable on long press of which text is copied to clipboard
             LongPressCopyText(

@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.ClipboardManager
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -44,7 +45,11 @@ fun LongPressCopyText(textToCopy: String) {
                             .show()
                     }
                 )
-            }
+            },
+        fontWeight = FontWeight.Bold
     )
-    Text(text = instructions)
+    Text(
+        text = instructions,
+        modifier = Modifier.padding(16.dp)
+    )
 }
