@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.ExitToApp
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material3.Icon
@@ -34,6 +35,7 @@ import com.example.todolist.composables.LongPressCopyText
 import com.example.todolist.composables.buttons.CustomButton
 import com.example.todolist.composables.OpenDialer
 import com.example.todolist.composables.OpenEmail
+import com.example.todolist.composables.OpenWebsite
 import com.example.todolist.composables.PhotoCarousel
 
 val imageList = listOf(
@@ -98,6 +100,14 @@ fun AboutLandingScreen(navController: NavHostController) {
                 label = "Our Email:",
                 icon = Icons.Default.Email,
                 content = { OpenEmail() }
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            ContactInfoRow(
+                label = "Our Website:",
+                icon = Icons.Default.ExitToApp,
+                content = { OpenWebsite() }
             )
 
             Spacer(modifier = Modifier.height(32.dp))
