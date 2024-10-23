@@ -120,7 +120,12 @@ fun ContactInfoRow(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Icon(imageVector = icon, contentDescription = null, modifier = Modifier.size(24.dp), tint = Color.Gray)
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = Modifier.size(24.dp),
+            tint = Color.Gray
+        )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = label,

@@ -26,9 +26,9 @@ fun TodoItemsContainer(
     onItemDelete: (TodoItem) -> Unit = {},
     overlappingElementsHeight: Dp = 0.dp
 ) {
-    // 1. Flow Data Collection
+    // Flow Data Collection
     val todos = todoItemsFlow.collectAsState(initial = listOf()).value
-    // 2. LazyColumn Setup
+    // LazyColumn Setup to make the view scrollable
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(MediumDp),

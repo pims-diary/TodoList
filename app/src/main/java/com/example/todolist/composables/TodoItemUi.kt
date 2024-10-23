@@ -4,8 +4,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -27,7 +25,6 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.todolist.R
 import com.example.todolist.data.TodoItem
 import com.example.todolist.ui.constants.*
@@ -98,19 +95,5 @@ fun TodoItemUi(
                 )
             }
         }
-    }
-}
-
-@Preview
-@Composable
-fun TodoItemUiPreview() {
-    Column(
-        modifier = Modifier.padding(MediumDp),
-        verticalArrangement = Arrangement.spacedBy(MediumDp)
-    ) {
-        TodoItemUi(todoItem = TodoItem(title = "Todo Item 1"))
-        TodoItemUi(todoItem = TodoItem(title = "Todo Item 2", isDone = true))
-        TodoItemUi(todoItem = TodoItem(title = "Todo Item 3"))
-        TodoItemUi(todoItem = TodoItem(title = "Todo Item 4", isDone = true))
     }
 }
